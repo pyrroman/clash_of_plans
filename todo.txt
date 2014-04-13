@@ -1,0 +1,13 @@
+I want to sequence the list of upgrades available at my town hall level.
+I want to keep my 4 builders busy at all times.
+My laboratory should always be upgrading a troop or spell.
+
+A user has a town hall at a specific level.
+Each town hall level has a set of troops available, where each troop has a maximum level.
+Each town hall level has a set of spells available, where each spell has a maximum level.
+
+A user has some or all of the buildings, troops, and spells available at his town hall level.
+Buildings are upgraded by builders.
+Troops and spells are upgraded in the laboratory.
+
+An upgrade has a duration
