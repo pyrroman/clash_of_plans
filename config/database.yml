@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: clash_of_plans_development
+
+test:
+  <<: *default
+  database: clash_of_plans_test
+
+production:
+  <<: *default
+  database: clash_of_plans_production
