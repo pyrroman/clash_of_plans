@@ -7,13 +7,14 @@ end
 
 Then(/^I should see town hall 1 buildings available$/) do
   page.should have_content("Town Hall Level: 1")
-  available_buildings = find("#available_buildings")
-  available_buildings.should have_content("Gold Mine (1)")
-  available_buildings.should have_content("Elixir Collector (1)")
-  available_buildings.should have_content("Gold Storage (1)")
-  available_buildings.should have_content("Elixir Storage (1)")
-  available_buildings.should have_content("Barracks (1)")
-  available_buildings.should have_content("Army Camp (1)")
+  within(".available_buildings") do
+    page.should have_content("Gold Mine (1)")
+    page.should have_content("Elixir Collector (1)")
+    page.should have_content("Gold Storage (1)")
+    page.should have_content("Elixir Storage (1)")
+    page.should have_content("Barracks (1)")
+    page.should have_content("Army Camp (1)")
+  end
 end
 
 Given(/^I have a level (\d+) town hall with some upgrades$/) do |arg1|
