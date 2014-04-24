@@ -7,10 +7,13 @@ development:
   <<: *default
   database: clash_of_plans_development
 
-test:
+test: &test
   <<: *default
   database: clash_of_plans_test
 
 production:
   <<: *default
   database: clash_of_plans_production
+
+cucumber:
+  <<: *test
