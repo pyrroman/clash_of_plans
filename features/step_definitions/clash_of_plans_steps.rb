@@ -1,14 +1,4 @@
 Village = Struct.new :town_hall_level, :buildings
-TownHall = Struct.new :level, :available_buildings
-Building = Struct.new :name, :level
-
-TownHall1 = TownHall.new(1, [Building.new("Gold Mine", 1),
-                             Building.new("Elixir Collector", 1),
-                             Building.new("Gold Storage", 1),
-                             Building.new("Elixir Storage", 1),
-                             Building.new("Barracks", 1),
-                             Building.new("Army Camp", 1)
-                            ])
 
 Given(/^My village has a new level (\d+) town hall$/) do |town_hall_level|
   @my_village = Village.new(1, [])
