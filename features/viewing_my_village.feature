@@ -1,12 +1,12 @@
 Feature: Viewing my village
 
-  Scenario: My village has a new level 1 town hall
-    Given My village has a new level 1 town hall
+  Scenario: My village has no buildings
+    Given my village has no buildings
     When I go to my village page
-    Then I should see town hall 1 buildings available
+    Then I should see that my village has no buildings
 
-  Scenario: I have a level 1 town hall with some upgrades
-    Given My village has a level 1 town hall with some upgrades
+  Scenario: My village has some buildings
+    Given My village has some buildings
     When I go to my village page
-    Then I should see my upgrades separate from the remaining available buildings
+    Then I should see the buildings in my village
 
