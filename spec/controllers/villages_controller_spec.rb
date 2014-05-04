@@ -6,7 +6,7 @@ describe VillagesController do
     it "uses a buildings collection presenter" do
       buildings_presenter = double
 
-      ClashOfPlans::Villages::Presenters::Collection.stub(:for) { buildings_presenter }
+      ClashOfPlans::Villages.stub(:my_village) { buildings_presenter }
 
       get :my_village
       expect(assigns(:buildings)).to be(buildings_presenter)
