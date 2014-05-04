@@ -12,16 +12,17 @@ module ClashOfPlans
           @buildings = buildings
         end
 
-        def upgrading(&block)
-          buildings.select { |building| building.status == "upgrading" }.each(&block)
+        ["upgrading",
+         "upgradable",
+         "maxed"
+        ].each do |status|
+          define_method status do |&block|
+            with_status(status, &block)
+          end
         end
 
-        def upgradable(&block)
-          buildings.select { |building| building.status == "upgradable" }.each(&block)
-        end
-
-        def maxed(&block)
-          buildings.select { |building| building.status == "maxed" }.each(&block)
+        def with_status(status, &block)
+          buildings.select { |building| building.status == status }.each(&block)
         end
       end
     end
