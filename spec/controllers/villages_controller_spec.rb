@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'clash_of_plans/villages/presenters/collection'
+require 'villages/presenters/collection'
 
 describe VillagesController do
   describe "GET /my_village" do

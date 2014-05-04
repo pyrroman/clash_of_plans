@@ -1,3 +1,5 @@
+require 'villages/presenters/collection'
+
 Building = Struct.new :name, :status, :level, :max_level
 
 class VillagesController < ApplicationController

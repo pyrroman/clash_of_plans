@@ -14,6 +14,5 @@ Bundler.require(*Rails.groups)
 
 module ClashOfPlans
   class Application < Rails::Application
-    config.autoload_paths += Dir["#{config.root}/app/**/"]
   end
 end
