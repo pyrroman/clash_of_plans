@@ -1,1 +1,22 @@
 Your village has no buildings
+
+%section.buildings.upgrading
+  %header
+    %h2 Upgrading
+  %ul
+    - @buildings.upgrading do |building|
+      %li.building="#{building.name} (#{building.level}/#{building.max_level})"
+
+%section.buildings.upgradable
+  %header
+    %h2 Upgradable
+  %ul
+    - @buildings.upgradable do |building|
+      %li.building="#{building.name} (#{building.level}/#{building.max_level})"
+
+%section.buildings.maxed
+  %header
+    %h2 Maxed
+  %ul
+    - @buildings.maxed do |building|
+      %li.building="#{building.name} (#{building.level}/#{building.max_level})"

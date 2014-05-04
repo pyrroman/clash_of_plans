@@ -8,5 +8,5 @@ Feature: Viewing my village
   Scenario: My village has some buildings
     Given My village has some buildings
     When I go to my village page
-    Then I should see the buildings in my village
+    Then I should see the buildings in my village grouped by status
 
