@@ -11,8 +11,8 @@ deploy:
   api_key:
     secure: ZajlmRf8U0cZjCSBC3jLUa+IFqgPSj7treWVp06e1uRHKrp0wfNCCTerD7PkhKEEzxaAnT6Ces/9vvcHN7RZEzh+gBm13vqgxWeXmDK+VibDOKwufLFiyWmgFqOvPTBqXO643hvv9rus6V6wH6JoI+zCcoxPkmA4bqGaem7CAp0=
   app: clash-of-plans
+  run:
+    - "bundle exec rake db:migrate"
+    - "bundle exec rake db:seed"
   on:
     repo: bryan-ash/clash_of_plans
-after_deploy:
-  - "bundle exec rake db:migrate"
-  - "bundle exec rake db:seed"
