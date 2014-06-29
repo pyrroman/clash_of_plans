@@ -2,8 +2,8 @@ language: ruby
 rvm:
 - 2.1.1
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rspec spec/
   - bundle exec cucumber features
 deploy:
