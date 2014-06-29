@@ -1,1 +1,8 @@
-There are no buildings to view
+%section
+  %h2 Active Upgrades
+  - if @upgrading.empty?
+    %p All builders are sleeping
+  - else
+    %ol
+    - for upgrade in @upgrading
+      %li="#{upgrade.name} (#{upgrade.level} / #{upgrade.th_max_level} / #{upgrade.ultimate_level})"

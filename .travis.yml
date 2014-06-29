@@ -1,8 +1,11 @@
 language: ruby
 rvm:
 - 2.1.1
-before_script:
-- psql -c 'create database clash_of_plans_test;' -U postgres
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
+  - bundle exec cucumber features
 deploy:
   provider: heroku
   api_key:
