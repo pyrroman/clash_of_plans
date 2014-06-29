@@ -13,4 +13,4 @@ deploy:
   app: clash-of-plans
   on:
     repo: bryan-ash/clash_of_plans
-after_deploy: "rake db:seed"
+after_deploy: "bundle exec rake db:seed"
