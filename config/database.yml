@@ -10,6 +10,7 @@ development:
 test: &test
   <<: *default
   database: clash_of_plans_test
+  username: postgres
 
 production:
   <<: *default
