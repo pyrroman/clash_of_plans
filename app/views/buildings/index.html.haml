@@ -6,3 +6,10 @@
     %ol
     - for upgrade in @upgrading
       %li="#{upgrade.name} (#{upgrade.level} / #{upgrade.th_max_level} / #{upgrade.ultimate_level})"
+  %h2 Upgradable Buildings
+  - if @upgradable.empty?
+    %p There are no buildings to upgrade, maybe it's time for a Town Hall upgrade!
+  - else
+    %ol
+    - for upgrade in @upgradable
+      %li="#{upgrade.name} (#{upgrade.level} / #{upgrade.th_max_level} / #{upgrade.ultimate_level})"
