@@ -3,6 +3,6 @@ class Building < ActiveRecord::Base
     where.not(upgrade_started_at: nil)
   end
   def self.upgradable
-    where(upgrade_started_at: nil).where(level < th_max_level)
+    where(upgrade_started_at: nil).where(":level < :th_max_level", {level: level, th_max_level: th_max_level})
   end
 end
