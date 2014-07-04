@@ -4,30 +4,34 @@
     %p All builders are sleeping
   - else
     %table
-      %th
-        %td Building
-        %td Current Level
-        %td TH Max Level
-        %td Ultimate Level
-      - for upgrade in @upgrading
+      %thead
         %tr
-          %td=upgrade.name
-          %td=upgrade.level
-          %td=upgrade.th_max_level
-          %td=upgrade.ultimate_level
+          %th Building
+          %th Current Level
+          %th TH Max Level
+          %th Ultimate Level
+      %tbody
+        - for upgrade in @upgrading
+          %tr
+            %td=upgrade.name
+            %td=upgrade.level
+            %td=upgrade.th_max_level
+            %td=upgrade.ultimate_level
   %h2 Upgradable Buildings
   - if @upgradable.empty?
     %p There are no buildings to upgrade, maybe it's time for a Town Hall upgrade!
   - else
     %table
-      %th
-        %td Building
-        %td Current Level
-        %td TH Max Level
-        %td Ultimate Level
-      - for upgrade in @upgradable
+      %thead
         %tr
-          %td=upgrade.name
-          %td=upgrade.level
-          %td=upgrade.th_max_level
-          %td=upgrade.ultimate_level
+          %th Building
+          %th Current Level
+          %th TH Max Level
+          %th Ultimate Level
+      %tbody
+        - for upgrade in @upgradable
+          %tr
+            %td=upgrade.name
+            %td=upgrade.level
+            %td=upgrade.th_max_level
+            %td=upgrade.ultimate_level
