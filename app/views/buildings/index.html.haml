@@ -29,9 +29,10 @@
           %th TH Max Level
           %th Ultimate Level
       %tbody
-        - for upgrade in @upgradable
+        - for building in @upgradable
           %tr
-            %td=upgrade.name
-            %td=upgrade.level
-            %td=upgrade.th_max_level
-            %td=upgrade.ultimate_level
+            %td=building.name
+            %td=building.level
+            %td=building.th_max_level
+            %td=building.ultimate_level
+            %td=link_to "Upgrade", upgrade_path(building)
