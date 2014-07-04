@@ -7,6 +7,6 @@ class Building < ActiveRecord::Base
   end
 
   def start_upgrade
-    upgrade_started_at = Time.now
+    touch(:upgrade_started_at)
   end
 end
