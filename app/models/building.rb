@@ -5,4 +5,8 @@ class Building < ActiveRecord::Base
   def self.upgradable
     where(upgrade_started_at: nil).where("level < th_max_level")
   end
+
+  def start_upgrade
+    upgrade_started_at = Time.now
+  end
 end
