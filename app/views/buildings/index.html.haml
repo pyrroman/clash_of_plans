@@ -3,6 +3,12 @@
   - if @upgrading.empty?
     %p All builders are sleeping
   - else
+    %table
+      %th
+        %td Building
+        %td Current Level
+        %td TH Max Level
+        %td Ultimate Level
     - for upgrade in @upgrading
       %tr
         %td=upgrade.name
@@ -13,7 +19,7 @@
   - if @upgradable.empty?
     %p There are no buildings to upgrade, maybe it's time for a Town Hall upgrade!
   - else
-      %table
+    %table
       %th
         %td Building
         %td Current Level
