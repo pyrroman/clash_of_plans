@@ -9,12 +9,12 @@
         %td Current Level
         %td TH Max Level
         %td Ultimate Level
-    - for upgrade in @upgrading
-      %tr
-        %td=upgrade.name
-        %td=upgrade.level
-        %td=upgrade.th_max_level
-        %td=upgrade.ultimate_level
+      - for upgrade in @upgrading
+        %tr
+          %td=upgrade.name
+          %td=upgrade.level
+          %td=upgrade.th_max_level
+          %td=upgrade.ultimate_level
   %h2 Upgradable Buildings
   - if @upgradable.empty?
     %p There are no buildings to upgrade, maybe it's time for a Town Hall upgrade!
@@ -25,9 +25,9 @@
         %td Current Level
         %td TH Max Level
         %td Ultimate Level
-    - for upgrade in @upgradable
-      %tr
-        %td=upgrade.name
-        %td=upgrade.level
-        %td=upgrade.th_max_level
-        %td=upgrade.ultimate_level
+      - for upgrade in @upgradable
+        %tr
+          %td=upgrade.name
+          %td=upgrade.level
+          %td=upgrade.th_max_level
+          %td=upgrade.ultimate_level
