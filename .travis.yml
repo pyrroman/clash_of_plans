@@ -13,6 +13,4 @@ deploy:
   app: clash-of-plans
   run:
     - "bundle exec rake db:migrate"
-    - "bundle exec rake db:seed"
-  on:
-    repo: bryan-ash/clash_of_plans
+  repo: bryan-ash/clash_of_plans
