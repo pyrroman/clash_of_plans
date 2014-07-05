@@ -17,6 +17,8 @@
             %td=upgrade.level
             %td=upgrade.th_max_level
             %td=upgrade.ultimate_level
+            %td=link_to "Cancel", cancel_upgrade_building_path(building), method: :put
+            %td=link_to "Complete", complete_upgrade_building_path(building), method: :put
   %h2 Upgradable Buildings
   - if @upgradable.empty?
     %p There are no buildings to upgrade, maybe it's time for a Town Hall upgrade!
