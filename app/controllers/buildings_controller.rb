@@ -8,4 +8,14 @@ class BuildingsController < ApplicationController
     building.start_upgrade
     redirect_to action: :index
   end
+  def cancel_upgrade
+    building = Building.find(params[:id])
+    building.cancel_upgrade
+    redirect_to action: :index
+  end
+  def complete_upgrade
+    building = Building.find(params[:id])
+    building.complete_upgrade
+    redirect_to action: :index
+  end
 end
