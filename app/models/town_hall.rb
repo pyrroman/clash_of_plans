@@ -1,0 +1,2 @@
+class TownHall < Building
+end
