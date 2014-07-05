@@ -6,7 +6,6 @@ class BuildingsController < ApplicationController
   def upgrade
     building = Building.find(params[:id])
     building.start_upgrade
-    @upgrading = Building.upgrading
-    @upgradable = Building.upgradable
+    redirect_to action: :index
   end
 end
