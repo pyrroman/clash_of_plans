@@ -11,12 +11,12 @@
           %th TH Max Level
           %th Ultimate Level
       %tbody
-        - for upgrade in @upgrading
+        - for building in @upgrading
           %tr
-            %td=upgrade.name
-            %td=upgrade.level
-            %td=upgrade.th_max_level
-            %td=upgrade.ultimate_level
+            %td=building.name
+            %td=building.level
+            %td=building.th_max_level
+            %td=building.ultimate_level
             %td=link_to "Cancel", cancel_upgrade_building_path(building), method: :put
             %td=link_to "Complete", complete_upgrade_building_path(building), method: :put
   %h2 Upgradable Buildings
