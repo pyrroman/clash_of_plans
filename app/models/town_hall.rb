@@ -1,2 +1,0 @@
-class TownHall < Building
-end
