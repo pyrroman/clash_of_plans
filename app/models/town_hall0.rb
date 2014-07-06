@@ -1,12 +1,12 @@
-class TownHall0 < Building
+class TownHall0 < TownHall
   def complete_upgrade
-    Building.create name: "Gold Mine", level: 0, th_max_level: 2, ultimate_level: 11
-    Building.create name: "Elixir Collector", level: 0, th_max_level: 2, ultimate_level: 11
-    Building.create name: "Gold Storage", level: 0, th_max_level: 1, ultimate_level: 11
-    Building.create name: "Elixir Storage", level: 0, th_max_level: 1, ultimate_level: 11
-    Building.create name: "Barracks", level: 0, th_max_level: 3, ultimate_level: 10
-    Building.create name: "Army Camp", level: 0, th_max_level: 1, ultimate_level: 8
-    Building.create name: "Cannon", level: 0, th_max_level: 2, ultimate_level: 12
+    GoldMine.create th_max_level: 2
+    ElixirCollector.create th_max_level: 2
+    GoldStorage.create th_max_level: 1
+    ElixirStorage.create th_max_level: 1
+    Barracks.create th_max_level: 3
+    ArmyCamp.create th_max_level: 1
+    Cannon.create th_max_level: 2
     self.type = "TownHall1"
     self.th_max_level = 2
     super
