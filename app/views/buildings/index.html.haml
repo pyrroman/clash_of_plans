@@ -38,3 +38,19 @@
             %td=building.th_max_level
             %td=building.ultimate_level
             %td=link_to "Upgrade", upgrade_building_path(building), method: :put
+  - if not @maxed.empty?
+    %h2 Maxed Buildings
+    %table
+      %thead
+        %tr
+          %th Building
+          %th Current Level
+          %th TH Max Level
+          %th Ultimate Level
+      %tbody
+        - for building in @maxed
+          %tr
+            %td=building.name
+            %td=building.level
+            %td=building.th_max_level
+            %td=building.ultimate_level
