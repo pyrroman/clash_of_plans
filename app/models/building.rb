@@ -7,6 +7,10 @@ class Building < ActiveRecord::Base
     where(upgrade_started_at: nil).where("level < th_max_level")
   end
 
+  def self.maxed
+    where("level = th_max_level")
+  end
+
   def start_upgrade
     touch(:upgrade_started_at)
   end
