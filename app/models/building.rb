@@ -11,6 +11,10 @@ class Building < ActiveRecord::Base
     where("level = th_max_level")
   end
 
+  def self.update_all_for_th_level(level)
+    all.each { |b| b.update_for_th_level(level)
+  end
+
   def start_upgrade
     touch(:upgrade_started_at)
   end
