@@ -12,7 +12,7 @@ class Building < ActiveRecord::Base
   end
 
   def self.update_all_for_th_level(level)
-    all.each { |b| b.update_for_th_level(level)
+    all.each { |b| b.update_for_th_level(level) }
   end
 
   def start_upgrade
