@@ -8,8 +8,6 @@ class TownHall0 < TownHall
     ArmyCamp.create
     Cannon.create
 
-    Building.update_all_for_th_level(1)
-
     self.type = "TownHall1"
     super
   end
