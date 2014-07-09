@@ -7,6 +7,9 @@ class TownHall0 < TownHall
     Barracks.create th_max_level: 3
     ArmyCamp.create th_max_level: 1
     Cannon.create th_max_level: 2
+
+    Building.update_all_for_th_level(1)
+
     self.type = "TownHall1"
     self.th_max_level = 2
     super
