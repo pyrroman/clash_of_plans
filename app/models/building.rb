@@ -30,6 +30,6 @@ class Building < ActiveRecord::Base
   end
 
   def update_for_th_level(level)
-    update_attribute(th_max_level: self.class::MAX_FOR_LEVEL[level])
+    update_attribute(:th_max_level, self.class::MAX_FOR_LEVEL[level])
   end
 end
