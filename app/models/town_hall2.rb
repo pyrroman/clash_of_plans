@@ -6,6 +6,7 @@ class TownHall2 < TownHall
     ElixirStorage.create
     ArmyCamp.create
     Laboratory.create
+    ClanCastle.create
     Mortar.create
     Bomb.create
 
