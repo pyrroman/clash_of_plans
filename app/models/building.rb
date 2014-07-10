@@ -15,6 +15,14 @@ class Building < ActiveRecord::Base
     all.each { |b| b.update_for_th_level(level) }
   end
 
+  def name
+    self.class.name.underscore.humanize
+  end
+
+  def ultimate_level
+    self.class::MAX_FOR_LEVEL[10]
+  end
+
   def start_upgrade
     touch(:upgrade_started_at)
   end
