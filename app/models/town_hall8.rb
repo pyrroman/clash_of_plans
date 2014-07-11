@@ -1,6 +1,6 @@
 class TownHall8 < TownHall
   def complete_upgrade
-    DarkElixirDrill.rb
+    DarkElixirDrill.create
     GoldStorage.create
     ElixirStorage.create
     ArcherTower.create
