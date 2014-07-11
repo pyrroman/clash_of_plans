@@ -1,4 +1,4 @@
-class TownHall10 < TownHall
+class TownHall9 < TownHall
   def complete_upgrade
     GoldMine.create
     ElixirCollector.create
