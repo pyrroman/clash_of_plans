@@ -14,6 +14,7 @@ class TownHall6 < TownHall
     GiantBomb.create
     SeekingAirMine.create
     HiddenTesla.create
+    BarbarianKing.create
 
     Building.update_all_for_th_level(7)
 
