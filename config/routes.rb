@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :villages, only: [:index]
+  resources :villages, only: [:index] do
     resources :buildings, only: [:index]
   end
 
