@@ -1,4 +1,6 @@
 class Building < ActiveRecord::Base
+  belongs_to :village
+
   def self.upgrading
     where.not(upgrade_started_at: nil)
   end
