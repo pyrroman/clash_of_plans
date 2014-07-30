@@ -1,0 +1,56 @@
+%section
+  %h2 Active Upgrades
+  - if @village.buildings.upgrading.empty?
+    %p All builders are sleeping
+  - else
+    %table
+      %thead
+        %tr
+          %th Building
+          %th Current Level
+          %th TH Max Level
+          %th Ultimate Level
+      %tbody
+        - for building in @village.buildings.upgrading
+          %tr
+            %td=building.name
+            %td=building.level
+            %td=building.th_max_level
+            %td=building.ultimate_level
+            %td=link_to "Cancel", cancel_upgrade_building_path(building), method: :put
+            %td=link_to "Complete", complete_upgrade_building_path(building), method: :put
+  %h2 Upgradable Buildings
+  - if @village.buildings.upgradable.empty?
+    %p There are no buildings to upgrade, maybe it's time for a Town Hall upgrade!
+  - else
+    %table
+      %thead
+        %tr
+          %th Building
+          %th Current Level
+          %th TH Max Level
+          %th Ultimate Level
+      %tbody
+        - for building in @village.buildings.upgradable
+          %tr
+            %td=building.name
+            %td=building.level
+            %td=building.th_max_level
+            %td=building.ultimate_level
+            %td=link_to "Upgrade", upgrade_building_path(building), method: :put
+  - if not @village.buildings.maxed.empty?
+    %h2 Maxed Buildings
+    %table
+      %thead
+        %tr
+          %th Building
+          %th Current Level
+          %th TH Max Level
+          %th Ultimate Level
+      %tbody
+        - for building in @village.buildings.maxed
+          %tr
+            %td=building.name
+            %td=building.level
+            %td=building.th_max_level
+            %td=building.ultimate_level
