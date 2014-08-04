@@ -1,6 +1,9 @@
 class VillagesController < ApplicationController
   def my_village
-#    @village = current_user.villages.first
-    @village = Village.first
+    if current_user.villages.empty?
+      current_user.villages << Village.first
+    end
+
+    @village = current_user.villages.first
   end
 end
